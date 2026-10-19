@@ -20,8 +20,19 @@ export default [
       },
     },
     rules: {
-      "no-unused-vars": ["error", { argsIgnorePattern: "^_", varsIgnorePattern: "^_" }],
       "no-undef": "error",
+    },
+  },
+  {
+    files: ["client/src/**/*.{js,jsx}"],
+    rules: {
+      "no-unused-vars": "off",
+    },
+  },
+  {
+    files: ["server/**/*.js"],
+    rules: {
+      "no-unused-vars": ["error", { argsIgnorePattern: "^_", varsIgnorePattern: "^_" }],
     },
   },
 ];
